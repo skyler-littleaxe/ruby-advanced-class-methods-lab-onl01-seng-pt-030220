@@ -53,13 +53,13 @@ class Song
     @@all.find { |song_obj| song_obj.name == search_name}
   end
   
-  def self.find_or_create_by_name(name)
-   if !find_by_name(name)
-     creat_by_name(name)
-   else
-     find_by_name
-   end
- end
+  #def self.find_or_create_by_name(name)
+   #if !find_by_name(name)
+    # creat_by_name(name)
+   #else
+    # find_by_name
+   #end
+ #end
   
 
   def self.alphabetical
