@@ -2,11 +2,7 @@ class Song
   attr_accessor :name, :artist_name
   @@all = []
   
-<<<<<<< HEAD
   def initialize(name=name, artist_name=artist_name)
-=======
-  def initialize(name=name)
->>>>>>> a4586ffc3dad2010162e665345d95f788cbedde1
    @name = name
     @artist_name = artist_name
     save
@@ -32,7 +28,7 @@ class Song
     self.new(name)
   end
     
-<<<<<<< HEAD
+
   def self.find_by_name(name)
     @@all.find { |song_obj| song_obj.name == name}
   end
@@ -52,7 +48,7 @@ class Song
     #end
   #end
     
-=======
+
   def self.find_by_name(search_name)
     @@all.find { |song_obj| song_obj.name == search_name}
   end
@@ -65,12 +61,12 @@ class Song
    end
  end
   
->>>>>>> a4586ffc3dad2010162e665345d95f788cbedde1
+
   def self.alphabetical
     self.all.sort_by { |song| song.name[0]}
   end
   
-<<<<<<< HEAD
+
   def self.create_from_filename(filename)
     song_array = filename.chomp!(".mp3").split(' - ')
     new_song = self.new
@@ -86,9 +82,8 @@ class Song
     new_song.name = song_array[1]
     new_song
   end
-=======
   
->>>>>>> a4586ffc3dad2010162e665345d95f788cbedde1
+
   
   def self.destroy_all
     @@all.clear
