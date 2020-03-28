@@ -72,7 +72,7 @@ class Song
   
 <<<<<<< HEAD
   def self.create_from_filename(filename)
-    song_array = filename.sub!(/.mp3/, '').split(' - ')
+    song_array = filename.chomp!(".mp3").split(' - ')
     new_song = self.new
     new_song.artist_name = song_array[0]
     new_song.name = song_array[1]
@@ -80,7 +80,7 @@ class Song
   end
   
   def self.new_from_filename(filename)
-    song_array = filename.sub!(/.mp3/, '').split(' - ')
+    song_array = filename.chomp!(".mp3").split(' - ')
     new_song = self.new
     new_song.artist_name = song_array[0]
     new_song.name = song_array[1]
